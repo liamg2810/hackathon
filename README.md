@@ -1,0 +1,1 @@
+This is the repo for team 6 in the 2024 inversity hackathon
