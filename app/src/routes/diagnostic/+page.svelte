@@ -22,6 +22,8 @@
 
     let currentQuestion = 0;
 
+    let started = false
+
     function nextQuestion(answer: string) {
         if (!diagnosticData) return;
 
@@ -51,25 +53,35 @@
 
 
 <main>
-    <div class="top-bar">
-        <h2>Diagnostic quiz</h2>
-        <h3>Question {currentQuestion+1} of {diagnosticData?.questions.length}</h3>
-    </div>
-
-    {#if diagnosticData}
-        <div class="question">
-            <h2>{diagnosticData?.questions[currentQuestion].question}</h2>
-
-            <div class="options">
-                {#each diagnosticData.questions[currentQuestion].options as option}
-                    <div class="btn-holder">
-                        <button class="option" on:click={() => {nextQuestion(option)}}>{option}</button>
-                    </div>
-                {/each}
-            </div>  
+    {#if !started}
+        <div class="welcome">
+            <h2>Welcome to the Diagnostic Quiz</h2>
+            <p>You will see a series of questions and answers. You must answer the question with the answer that is as close to you as possible.</p>
+            <h3>Click the button below to start</h3>
         </div>
+        <button class="btn-start" on:click={() => {started = true}}>Start</button>
     {:else}
-        <p>Loading...</p>
+
+        <div class="top-bar">
+            <h2>Diagnostic quiz</h2>
+            <h3>Question {currentQuestion+1} of {diagnosticData?.questions.length}</h3>
+        </div>
+
+        {#if diagnosticData}
+            <div class="question">
+                <h2>{diagnosticData?.questions[currentQuestion].question}</h2>
+
+                <div class="options">
+                    {#each diagnosticData.questions[currentQuestion].options as option}
+                        <div class="btn-holder">
+                            <button class="option" on:click={() => {nextQuestion(option)}}>{option}</button>
+                        </div>
+                    {/each}
+                </div>  
+            </div>
+        {:else}
+            <p>Loading...</p>
+        {/if}
     {/if}
 </main>
 
@@ -81,6 +93,29 @@
         height: 100vh;
         padding: 1rem;
         color: #ddd;
+    }
+
+    .welcome {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .btn-start {
+        padding: 0.5rem 1rem;
+        background-color: var(--secondary);
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s;
+        font-size: 1rem;
+    }
+
+    .btn-start:hover {
+        scale: 1.05;
     }
 
     .top-bar {

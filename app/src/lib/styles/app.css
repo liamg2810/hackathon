@@ -5,11 +5,14 @@
 
     --primary: #3E3E3E;
     --secondary: #bebebe;
-    --notcolor: #FF5252;
-    --notreallycolor: #FFA274;
-    --kindacolor: #52FFEB;
-    --totallycolor: #5EFF52;
-    --mostlycolor: #0BAEFF;
+    --notcolor: #ff1900;
+    --notreallycolor: #ff8000;
+    --kindacolor: #ffd500;
+    --totallycolor: #a2ff00;
+    --mostlycolor: #00ff40;
+
+    
+    font-family: "Sour Gummy", sans-serif;
 }
 
 body {
