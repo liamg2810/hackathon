@@ -31,8 +31,6 @@ Phrase: I understand better when I discuss literature in groups Answer: No
 Deliverables: A Personality Summary based on test responses, a Learning Style Assessment based on diagnostic answers, and a Learning Plan that incorporates these insights, with recommendations on study methods, types of texts to focus on.
 
 Provide response as pure HTML text ignoring <html> and <body>.
-
-Do not do any engagement strategies.
 `;
 
 async function CallChat(formattedPersonalityAnswers: string, formattedDiagnosticAnswers: string) {

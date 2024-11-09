@@ -29,14 +29,15 @@
 </script>
 
 <main>
-    <h1>Results</h1>
-    {#if result === ''}
-        <p>Loading...</p>
-    {:else}
-        
-        {@html result.replace(/\n/g, '<br>')}
-    {/if}
-    <span>{result}</span>
+    <div class="results">
+        <h1>Results</h1>
+        {#if result === ''}
+            <p>Loading...</p>
+        {:else}
+            {@html result.replace(/\n/g, '<br>')}
+        {/if}
+
+    </div>
 </main>
 
 <style>
@@ -44,11 +45,24 @@
         text-align: center;
         color: #dddddd;
         height: 75vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    .results {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: left;
     }
 
     h1 {
         font-size: 2rem;
         margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    h2 {
+        text-align: center;
     }
     
 </style>
