@@ -2,7 +2,7 @@
   import { onMount } from "svelte";
   import { formattedDiagnosticAnswers, formattedPersonalityAnswers } from "$lib/ts/stores";
 
-    let result: string[] = [];
+    let result: string = '';
 
     onMount(async () => {
         console.log($formattedPersonalityAnswers)
@@ -18,7 +18,7 @@
             if (response.ok) {
                 const data = await response.json();
                 console.log(data.message);  // Output the server response
-                result = data.message.split('\n');
+                result = data.message;
             } else {
                 console.error('Error:', response.status);
             }
@@ -30,13 +30,11 @@
 
 <main>
     <h1>Results</h1>
-    {#if result.length === 0}
+    {#if result === ''}
         <p>Loading...</p>
     {:else}
-        {#each result as line}
-        {@html line.replace(/\n/g, '<br>')}
-            <p>{line}</p>
-        {/each}
+        
+        {@html result.replace(/\n/g, '<br>')}
     {/if}
     <span>{result}</span>
 </main>
