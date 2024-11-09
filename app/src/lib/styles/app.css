@@ -1,0 +1,17 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    --primary: #3E3E3E;
+    --secondary: #808080;
+    --notcolor: #FF5252;
+    --notreallycolor: #FFA274;
+    --kindacolor: #52FFEB;
+    --totallycolor: #5EFF52;
+    --mostlycolor: #0BAEFF;
+}
+
+body {
+    background: var(--primary);
+}
