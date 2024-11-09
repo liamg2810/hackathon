@@ -1,6 +1,9 @@
 <script lang="ts">
     import { onMount } from 'svelte';
 
+    import {diagnosticAnswers, formattedPersonalityAnswers} from "$lib/ts/stores"
+  import { get } from 'svelte/store';
+
     // Define types for the data structure
     type Question = {
         question: string;
@@ -32,12 +35,15 @@
         currentQuestion++;
 
         if (currentQuestion === diagnosticData.questions.length) {
+            diagnosticAnswers.set(answers);
+
             window.location.href = '/results';
         }
     }
 
     // Fetch the JSON file when the component is mounted
     onMount(async () => {
+        console.log(get(formattedPersonalityAnswers))
         try {
         const response = await fetch('/diagnostic.json');  // Adjust the path if necessary
         if (response.ok) {

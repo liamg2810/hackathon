@@ -1,6 +1,15 @@
+<script lang="ts">
+    import {ResetAnswers} from "$lib/ts/stores"
+
+    function Start() {
+        ResetAnswers()
+        window.location.href = "/personality"
+    }
+</script>
+
 <main>
     <h1>Welcome to the Personality Diagnostic Quiz for Individual Learner Experiences</h1>
-    <button on:click={() => {window.location.href = "/personality"}}>Start</button>
+    <button on:click={Start}>Start</button>
 </main>
 
 <style>

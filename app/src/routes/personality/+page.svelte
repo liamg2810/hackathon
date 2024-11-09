@@ -1,6 +1,7 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import { writable } from 'svelte/store';
+    import {personalityAnswers} from "$lib/ts/stores"
 
 
     type Answer = {
@@ -38,8 +39,12 @@
         if (debounce) return;
         
         answers = [...answers, { word: personalityData.words[currentIndex], answer }];
+        console.log(answers);
+
         currentIndex++;
         if (currentIndex === personalityData.words.length) {
+            personalityAnswers.set(answers);
+
             window.location.href = '/diagnostic';
         }
 
