@@ -1,0 +1,121 @@
+{
+    "questions": [
+      {
+        "question": "When you read a novel or poem, what do you focus on first?",
+        "options": [
+          "The characters and their development",
+          "The plot and what happens in the story",
+          "The language, symbolism, and literary techniques used",
+          "The themes and underlying messages in the text"
+        ]
+      },
+      {
+        "question": "How do you approach understanding a challenging or abstract piece of literature?",
+        "options": [
+          "I reread the passage multiple times until I can interpret it",
+          "I try to get a general sense first and then go back for deeper analysis",
+          "I focus on breaking down the words, metaphors, or symbolism",
+          "I seek out secondary resources (e.g., analyses, discussions) to help me understand it"
+        ]
+      },
+      {
+        "question": "If a text has multiple possible interpretations, how do you usually engage with it?",
+        "options": [
+          "I try to choose one interpretation and stick with it",
+          "I enjoy exploring and discussing different interpretations",
+          "I look for concrete evidence in the text to support my interpretation",
+          "I leave it open-ended and enjoy thinking about different possibilities"
+        ]
+      },
+      {
+        "question": "When reading a poem, what helps you understand its meaning best?",
+        "options": [
+          "Focusing on the structure, rhyme, and rhythm of the poem",
+          "Analyzing the figurative language (metaphors, similes, etc.) and symbolism",
+          "Thinking about the emotional impact and tone of the poem",
+          "Discussing the poem with others to explore different viewpoints"
+        ]
+      },
+      {
+        "question": "How do you feel about abstract or non-literal poetry?",
+        "options": [
+          "I enjoy it and try to decipher its deeper meanings",
+          "I find it challenging but I appreciate the complexity",
+          "I struggle to connect with it, preferring more straightforward language",
+          "I tend to focus on how the poem makes me feel, rather than finding a specific meaning"
+        ]
+      },
+      {
+        "question": "When analyzing a literary text, what is the most important aspect for you to focus on?",
+        "options": [
+          "The structure and form of the text (e.g., narrative style, point of view)",
+          "The themes, messages, or moral lessons of the work",
+          "The character development and relationships",
+          "The language, literary devices, and stylistic choices made by the author"
+        ]
+      },
+      {
+        "question": "How do you usually identify a literary theme in a text?",
+        "options": [
+          "I look for recurring symbols, words, or motifs",
+          "I focus on the actions and experiences of the characters",
+          "I consider the overall message the author seems to be communicating",
+          "I engage with others to hear their ideas and interpretations of the themes"
+        ]
+      },
+      {
+        "question": "How do you best prepare for a literature exam or essay on a book or poem?",
+        "options": [
+          "I read the book or poem again, paying close attention to key passages and quotes",
+          "I summarize each chapter or poem to ensure I understand the main ideas",
+          "I make detailed notes about literary devices and themes",
+          "I discuss the text with others or attend group study sessions to compare interpretations"
+        ]
+      },
+      {
+        "question": "How do you prefer to take notes when studying a literary text?",
+        "options": [
+          "I write down detailed analyses of the language, form, and style",
+          "I jot down summaries and key ideas from each section of the text",
+          "I focus on noting down quotes that seem important or thought-provoking",
+          "I take bullet points or mind maps that link themes, characters, and key moments"
+        ]
+      },
+      {
+        "question": "Do you find it helpful to understand the historical or cultural context of a text when reading literature?",
+        "options": [
+          "Yes, I think it’s crucial to understand the time period and background of the author",
+          "Yes, but only if it directly relates to the themes or characters in the text",
+          "I prefer to focus on the text itself, without thinking too much about its context",
+          "It’s helpful, but I don’t always engage with the context unless it’s explicitly discussed"
+        ]
+      },
+      {
+        "question": "When studying a piece of literature, how often do you look at literary criticism or analyses of the work?",
+        "options": [
+          "Often—reading what experts think helps me deepen my understanding",
+          "Sometimes—if I’m unsure about a part of the text, I’ll check analyses",
+          "Rarely—unless I’m struggling to understand a key concept or theme",
+          "Never—I prefer to form my own opinions without external influence"
+        ]
+      },
+      {
+        "question": "Which genre of literature do you find most engaging?",
+        "options": [
+          "Novels—especially ones with complex characters and plot twists",
+          "Poetry—because of the emotional depth and the challenge of interpretation",
+          "Plays—due to the dialogue and performance aspect",
+          "Short stories—because of their concise and often thought-provoking nature"
+        ]
+      },
+      {
+        "question": "When reading a literary work that includes multiple genres (e.g., a novel with poems or a play with prose), how do you approach it?",
+        "options": [
+          "I analyze each genre separately to see how they contribute to the work as a whole",
+          "I try to understand how the different genres interact and enhance the meaning of the text",
+          "I focus on the narrative and themes, regardless of the genre",
+          "I pay special attention to how each genre affects the tone or mood of the text"
+        ]
+      }
+    ]
+  }
