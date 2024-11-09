@@ -1,5 +1,26 @@
 <script lang="ts">
+    import { onMount } from 'svelte';
+    import { writable } from 'svelte/store';
 
+    
+
+    interface PersonalityData {
+        words: string[];
+    }
+
+    let personalityData: PersonalityData = { words: [] };
+    let currentIndex = 0;
+
+    function ToTitleCase(str: string) {
+        return str.replace(/\w\S*/g, function (txt) {
+            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        });
+    }
+
+    onMount(async () => {
+        const response = await fetch('/personality.json');
+        personalityData = await response.json();
+    });
 </script>
 
 <main>
@@ -7,7 +28,12 @@
         <h2>Question 1 of 10</h2>
 
     </div>
-    <div class="img-box"></div>
+    {#if personalityData.words.length > 0}
+        <div class="img-box">
+            <h1>{ToTitleCase(personalityData.words[currentIndex])}</h1>
+            <img src={`/personalityimgs/${personalityData.words[currentIndex]}.PNG`} alt={personalityData.words[currentIndex]} />
+        </div>
+    {/if}
     <div class="btns-container">
         <button class="btn btn-not">Not me at all</button>
         <button class="btn btn-notreally">Not really me</button>
@@ -21,24 +47,45 @@
     main {
         display: grid;
         place-items: center;
-        grid-template-rows: 0.2fr 1fr 0.2fr;
+        grid-template-rows: 1fr 0.8fr 0.2fr;
+        gap: 10px;
         height: 100vh;
-        padding: 1rem;
+        padding-bottom: 1rem;
     }
 
     .img-box {
-        width: 100%;
-        height: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+        height: 80vh;
+        max-width: 900px;
         background-color: var(--secondary);
         border-radius: 20px;
     }
 
+    .img-box h1 {
+        font-size: 1.5rem;
+        color: #222;
+        text-align: left;
+        padding: 10px;
+    }
+
     .btns-container {
         display: flex;
+        justify-content: center;
         gap: 1rem;
         padding: 10px;
+        width: 90vw;
+        max-width: 900px;
         background-color: var(--secondary);
         border-radius: 12px;
+    }
+
+    .img-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
     }
 
     .btn {
